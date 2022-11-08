@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Project5.MainPage">
+
+    <ScrollView>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="60"/>
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Image
+                Grid.Row="0"
+                Grid.ColumnSpan="3"
+                Source="logo.png"
+                SemanticProperties.Description="ETSU Logo"
+                HeightRequest="200"
+                HorizontalOptions="Center" />
+
+            <Label
+                Text="CSCI 2210-001 ~ Project 5 ~ Jackson Denti"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                Grid.Row="1"
+                Grid.ColumnSpan="3"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="10"
+                />
+
+            <Label
+                x:Name="label"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                Grid.Row="2"
+                Grid.ColumnSpan="3"
+                Text="Lets figure out what to eat tonight. Are you a Vegetarian?"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
+                FontSize="18"/>
+
+            <Button
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                Grid.Row="3"
+                Grid.Column="0"
+                x:Name="YesButton"
+                Text="Yes?"
+                SemanticProperties.Hint="Counts the number of times you click"
+                Clicked="OnYesClicked"/>
+
+            <Button
+                Grid.Row="3"
+                Grid.Column="2"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                x:Name="NoButton"
+                Text="No?"
+                SemanticProperties.Hint="Counts the number of times you click"
+                Clicked="OnNoClicked"/>
+
+            <Button
+                Grid.Row="3"
+                Grid.Column="1"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                x:Name="RestartButton"
+                Text="Restart?"
+                SemanticProperties.Hint="Counts the number of times you click"
+                Clicked="OnRestartClicked"/>
+        </Grid>
+    </ScrollView>
+
+</ContentPage>
