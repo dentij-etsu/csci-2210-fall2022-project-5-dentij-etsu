@@ -62,8 +62,8 @@ public partial class MainPage : ContentPage
     /// <summary>
     /// If the user clicks on the "No" button, it updates the text and current node to the correct node
     /// </summary>
-    /// <param name="sender"></param>
-    /// <param name="e"></param>
+    /// <param name="sender"> Object Calling method </param>
+    /// <param name="e"> Event Args </param>
     private void OnNoClicked(object sender, EventArgs e)
     {
         if (currentNode.HasRightChild) currentNode = currentNode.RightChild;
@@ -73,8 +73,8 @@ public partial class MainPage : ContentPage
     /// <summary>
     /// If the user clicks on the "No" button, it updates the text and current node to the correct node
     /// </summary>
-    /// <param name="sender"></param>
-    /// <param name="e"></param>
+    /// <param name="sender"> Object Calling method </param>
+    /// <param name="e"> Event Args </param>
     private void OnYesClicked(object sender, EventArgs e)
     {
         if (currentNode.HasLeftChild) currentNode = currentNode.LeftChild;
@@ -83,8 +83,8 @@ public partial class MainPage : ContentPage
     /// <summary>
     /// If the user clicks on the "Restart" Button, it sets the current node to the root of the tree
     /// </summary>
-    /// <param name="sender"></param>
-    /// <param name="e"></param>
+    /// <param name="sender"> Object Calling method </param>
+    /// <param name="e"> Event Args </param>
     private void OnRestartClicked(object sender, EventArgs e)
     {
         currentNode = quizTree.Root;
